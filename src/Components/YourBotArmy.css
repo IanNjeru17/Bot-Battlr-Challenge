@@ -1,0 +1,15 @@
+
+.bgWarning {
+    background-color: #ffcc00; /* Yellow color */
+  }
+  
+  .card {
+    margin: 10px;
+    background-color: aqua;
+    align-items: center;
+    text-align: center;
+  }
+  h2 {
+text-align: center;
+  }
+  
