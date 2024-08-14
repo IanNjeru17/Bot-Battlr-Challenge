@@ -4,6 +4,7 @@ import {NavLink, useParams } from 'react-router-dom'
 function Details({botsArray,favouriteBots,setFavouriteBots}) {
   const { id } = useParams();
   const bot = botsArray.find((bot) => bot.id === parseInt(id));
+  
   function addToFavourites(event){
     const botId = parseInt(event.target.id);
     const draftedBot=botsArray.find((bot) =>  bot.id===botId)
@@ -22,7 +23,9 @@ function Details({botsArray,favouriteBots,setFavouriteBots}) {
             <h3 className="card-title">Name: {bot.name}</h3>
             <p className="card-text"><strong>Catchphrase</strong>: <br/>{bot.catchphrase}</p>
             <h3>Class: {bot.bot_class}&#9992;</h3>
-            <h4>&#128147;{bot.health} &#128737;{bot.armor} &#9889;{bot.damage}</h4>
+            <h4>Health:{bot.health} </h4>
+          <h4>Armor:{bot.armor} </h4>
+          <h4>Damage:{bot.damage}</h4>
             <button 
             onClick={addToFavourites}
             className="btn btn-danger"

@@ -1,0 +1,56 @@
+/* Container for the bot cards */
+.bot-collection-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+  }
+  
+  /* Individual card styling */
+  .bot-card {
+    flex: 1 1 calc(33.333% - 16px); /* 3 cards per row, adjusting for gap */
+    max-width: calc(33.333% - 16px); /* Ensure cards fit within the container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin-bottom: 16px; /* Space below each card */
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #6c757d; /* Secondary background color */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card image styling */
+  .card-img-top {
+    width: 50%;
+    height: 300px;
+    display: block;
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 16px;
+  }
+  
+  /* Card title and text styling */
+  .card-title, .card-text, .card-body h4 {
+    margin: 0 0 8px;
+  }
+  
+  /* Button styling */
+  .btn {
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  
+  .btn-danger {
+    background-color: red;
+  }
+  .btn-info {
+    background-color: aqua;
+    
+  }

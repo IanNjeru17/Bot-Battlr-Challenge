@@ -25,22 +25,24 @@ function YourBotArmy({ favouriteBots, setFavouriteBots }) {
   }
 
   const favouriteList = favouriteBots.map((fav) => (
-    <div className={`${styles.card} col-3 bg-info`} key={fav.id}>
-      <img src={fav.avatar_url} className="card-img-top" alt="Loading..." />
-      <div className="card-body">
-        <h3 className="card-title">{fav.name}</h3>
-        <p className="card-text">{fav.catchphrase}</p>
-        <h4>
-          &#128147;{fav.health} &#128737;{fav.armor} &#9889;{fav.damage}
-        </h4>
-        <button onClick={dischargeBot} className="btn btn-success" id={fav.id}>
-          Delist
-        </button>
-        <button onClick={() => deleteBot(fav)} className="btn btn-danger">
-          X
-        </button>
+    fav ? ( 
+      <div className={`${styles.card} col-3 bg-info`} key={fav.id}>
+        <img src={fav.avatar_url} className="card-img-top" alt={`Avatar of ${fav.name}`} />
+        <div className="card-body">
+          <h3 className="card-title">{fav.name}</h3>
+          <p className="card-text">{fav.catchphrase}</p>
+          <h4>Health:{fav.health} </h4>
+          <h4>Armor:{fav.armor} </h4>
+          <h4>Damage:{fav.damage}</h4>
+          <button onClick={dischargeBot} className="btn btn-success" id={fav.id}>
+            Delist
+          </button>
+          <button onClick={() => deleteBot(fav)} className="btn btn-danger">
+            X
+          </button>
+        </div>
       </div>
-    </div>
+    ) : null
   ));
 
   return (
